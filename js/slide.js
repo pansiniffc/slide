@@ -7,12 +7,9 @@ export default class Slide {
   onStart(event) {
     event.preventDefault();
     this.wrapper.addEventListener("mousemove", this.onMove);
-    console.log("mousedown");
   }
 
-  onMove(event) {
-    console.log("moveu");
-  }
+  onMove(event) {}
 
   onEnd(event) {
     this.wrapper.removeEventListener("mousemove", this.onMove);
@@ -20,7 +17,7 @@ export default class Slide {
 
   addSlideEvents() {
     this.wrapper.addEventListener("mousedown", this.onStart);
-    this.wrapper.addEventListener("moueup", this.onEnd);
+    this.wrapper.addEventListener("mouseup", this.onEnd);
   }
 
   bindEvents() {
